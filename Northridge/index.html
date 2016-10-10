@@ -1,0 +1,99 @@
+﻿
+<html lang="en" ng-app="app" ng-controller="MainCtrl as main">
+
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="main.Title">The Center at Northridge</title>
+    <base href="/" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="/app/css/site.css" rel="stylesheet" type="text/css">
+    <style>
+        .table-hover {
+            cursor: pointer;
+        }
+    </style>
+ 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+
+    <script src="app/systemjs.config.js"></script>
+    <script>
+     
+        System.import("/dependancies/ng-google-chart.js")
+        System.import("models/Outcome.js")
+      
+
+
+    </script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/app.controller.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div ng-hide="true" style="width:300px;margin-left:auto;margin-right:auto;padding-top:30px">
+            <h3 style="color:gray">Loading Center Outcomes Reporting Module.....</h3>
+        </div>
+        <div ng-view ng-cloak></div>
+    </div>
+
+
+
+
+    <!--<script type="text/javascript" src="dependancies/ng-google-chart.js"></script>-->
+    <script src="app/config.js?v=1"></script>
+
+
+
+    <script src="app/pages/index/index.js"></script>
+    <script src="app/services/patientFact.js"></script>
+    <script src="app/pages/login/login.js"></script>
+    <script src="app/pages/patient-list/patient-list.js"></script>
+    <script src="app/pages/patient/patient.js"></script>
+
+    <script src="app/pages/outcomes-report/outcomes-report.js?v1"></script>
+    <!--<script src="app/pages/retirementPlanner/retirementPlanner.js?v1"></script>
+    <script src="app/pages/survivorNeedsPlanner/survivorNeedsPlanner.js?v1"></script>
+    <script src="app/pages/linc/linc.js"></script>
+    <script src="app/pages/library/library.js?v1"></script>
+    <script src="app/pages/library/book/book.js?v1"></script>
+    <script src="app/pages/library/preview/book-preview.js?v1"></script>
+
+    <script src="app/components/newsletters/newsletters.js"></script>
+
+    <script src="app/components/needs/needs.js"></script>
+    <script src="app/components/contact/contact.js"></script>
+    <script src="app/components/primaryContact/primaryContact.js?v1"></script>
+    <script src="app/components/spousalContact/spousalContact.js?v1"></script>
+    <script src="app/components/income/income.js?v1"></script>
+    <script src="app/components/assets/assets.js?v1"></script>
+    <script src="app/components/savings/savings.js?v1"></script>
+    <script src="app/components/pension/pension.js?v1"></script>
+    <script src="app/components/receipts/receipts.js?v1"></script>
+    <script src="app/components/objectives/objectives.js?v1"></script>
+    <script src="app/components/socialSecurityOverride/socialSecurityOverride.js?v1"></script>
+    <script src="app/components/rateAssumptions/rateAssumptions.js?v1"></script>
+    <script src="app/components/address/address.js?v1"></script>
+    <script src="app/components/dependants/dependants.js?v1"></script>
+    <script src="app/components/insurance/insurance.js?v1"></script>
+    <script src="app/components/liabilities/liabilities.js?v1"></script>
+    <script src="app/components/survivorNeeds/survivorNeeds.js?v1"></script>
+    <script src="app/components/cashNeeds/cashNeeds.js?v1"></script>-->
+
+
+
+
+
+    <script type="text/javascript">
+        //    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
+</body>
+
+</html>

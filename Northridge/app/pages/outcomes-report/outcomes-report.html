@@ -1,0 +1,122 @@
+﻿<div class="row">
+    <div class="col-md-10">
+        <h1>Individual Patient Report Center at Northridge</h1>
+    </div>
+    <div class="col-md-2">
+        <img src="/img/logo.png" />
+    </div>
+</div>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4"><span class="lbl">Patient ID:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.id"></span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">Admit Date:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.admissionDate | date:'shortDate'">{{}}</span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">REferring Hospital:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.referringHospital"></span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">DC Goal:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.dischargeOutComeGoal"></span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">Actual DC:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.dc.dischargeOutCome"></span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4"><span class="lbl">First Name</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.firstName"></span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">DC Date:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.dischargeDate | date:'shortDate'"></span></div>
+        </div><div class="row">
+            <div class="col-md-6"><span class="lbl">Primary MD:</span></div>
+            <div class="col-md-6"><span class="lblData" ng-bind="vm.patient.primaryMd"></span></div>
+        </div><div class="row">
+            <div class="col-md-6"><span class="lbl">Payment Sources:</span></div>
+            <div class="col-md-6"><span class="lblData" ng-bind="vm.patient.paymentSources"></span></div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4"><span class="lbl">Last Name</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.lastName"></span></div>
+        </div><div class="row">
+            <div class="col-md-4"><span class="lbl">Primary Impairment:</span></div>
+            <div class="col-md-8"><span class="lblData" ng-bind="vm.patient.primaryImpairment"></span></div>
+        </div><div class="row">
+            <div class="col-md-8"><span class="lbl">Prepared to Manage at Adm:</span></div>
+            <div class="col-md-4"><span class="lblData" ng-bind="vm.patient.preparedToManageAtAdmission"></span></div>
+        </div><div class="row">
+            <div class="col-md-8"><span class="lbl">Prepared to Manage at DC:</span></div>
+            <div class="col-md-4"><span class="lblData" ng-bind="vm.patient.preparedToManageAdDischarge"></span></div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top:20px;">
+    <div class="col-md-12">
+        <h2>FIM Self Care Profile</h2>
+        <div google-chart chart="vm.myChart" style="padding:20px"></div>
+    </div>
+</div> 
+<div class="row" style="margin-top:20px;">
+    <div class="col-md-4" >
+        <h3>Mobility Profile</h3>
+        <div google-chart chart="vm.mobilityProfile" style="padding:20px"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Assistance</h3>        
+        <div google-chart chart="vm.assistance" style="padding:20px"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Ambulation Distance</h3>
+        <div google-chart chart="vm.ambulation" style="padding:20px"></div>
+    </div>
+</div>
+
+
+<div ng-show="vm.showDataEntry">
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-5">
+            <lbl>
+                Patient Name
+            </lbl>
+            <input class="form-control" style="width:100%" ng-model="vm.patient.name" ng-blur="vm.BuildChart()" />
+        </div>
+    </div>
+    <div style="height:50px;"><hr /></div>
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-8">
+            <table class="table table-condensed">
+                <tr>
+                    <th></th>
+                    <td>Admission</td>
+                    <td>Discharge</td>
+                    <td>Totals</td>
+                </tr>
+                <tr>
+                    <td>Cognitive FIM:</td>
+                    <td><input class="form-control" ng-model="vm.patient.cogAdmission" type="number" ng-blur="vm.BuildChart()" /></td>
+                    <td><input class="form-control" ng-model="vm.patient.cogDischarge" type="number" ng-blur="vm.BuildChart()" /></td>
+                    <td style="text-align:center">{{vm.patient.cogAdmission+vm.patient.cogDischarge}}</td>
+                </tr>
+                <tr>
+                    <td>Motor FIM:</td>
+                    <td><input class="form-control" ng-model="vm.patient.motAdmission" type="number" ng-blur="vm.BuildChart()" /></td>
+                    <td><input class="form-control" ng-model="vm.patient.motDischarge" type="number" ng-blur="vm.BuildChart()" /></td>
+                    <td style="text-align:center">{{vm.patient.cogAdmission+vm.patient.cogDischarge}}</td>
+                </tr>
+
+            </table>
+            <div style="height:100px;"></div>
+
+        </div>
+    </div>
+</div>

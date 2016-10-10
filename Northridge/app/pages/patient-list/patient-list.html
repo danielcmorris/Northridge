@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col-md-10">
+        <h1>Center at Northridge</h1>
+    </div>
+    <div class="col-md-2">
+        <img src="/img/logo.png" />
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-9">
+        <label for="searchText">
+            Patient Name
+            <input type="text" ng-model="st" placeholder="Last Name, First Name" ng-keyup="vm.Filter(this)"  class="form-control" />
+        </label>
+    </div>
+
+    
+    <div class="col-md-2" style="padding-top:20px;">
+        <button type="button" ng-click="vm.NewPatient()" class="btn btn-default">New Patient</button>
+
+    </div>
+    <div class="col-md-1" style="padding-top:20px;">
+        <button type="button" ng-click="vm.Logout()" class="btn btn-default">Logout</button>
+
+    </div>
+
+</div>
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Edit</th>
+                <th>Report</th>
+            </tr>
+            <tr ng-repeat="p in vm.Patients | filter: st">
+
+                <td>{{p.id}}</td>
+                <td ng-bind="p.firstName"></td>
+                <td ng-bind="p.lastName"></td>
+                <td><a ng-href="#/patient-list/{{p.id}}">Edit</a></td>
+                <td><a href ng-click="vm.OutcomeReport(p)">Report</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

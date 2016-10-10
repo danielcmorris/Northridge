@@ -1,0 +1,21 @@
+{
+  "name": "northridge",
+  "version": "1.0.0",
+  "description": "Outcomes Reporting Database",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "systemjs": "^0.19.39"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morris Development",
+  "license": "MIT"
+}

@@ -1,0 +1,34 @@
+﻿[
+  {
+    "title": "Eating",
+    "admission": 4,
+    "goal": 3,
+    "discharge": 4
+  },
+  {
+    "title": "Grooming",
+    "admission": 4,
+    "goal": 3,
+    "discharge": 4
+  },
+  {
+    "title": "Bathing",
+    "admission": 4,
+    "goal": 3,
+    "discharge": 4
+  },
+  {
+    "title": "Dressing Upper Body",
+    "admission": 4,
+    "goal": 3,
+    "discharge": 4
+  },
+  {
+    "title": "Dressing Lower Body",
+    "admission": 4,
+    "goal": 3,
+    "discharge": 4
+  },
+  {"title": "Toileting","admission": 4,"goal": 3, "discharge": 4}
+
+]

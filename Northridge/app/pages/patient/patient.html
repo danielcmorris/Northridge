@@ -1,0 +1,61 @@
+﻿<style>
+    .outcome{text-align:center;font-family:Arial, Helvetica, sans-serif; font-size:14pt;width:60px}
+</style>
+<div class="row">
+    <div class="col-md-10">
+        <h1>Center at Northridge</h1>
+    </div>
+    <div class="col-md-2">
+        <img src="/img/logo.png" />
+    </div>
+</div>
+<hr /> 
+<div class="row">
+    <div class="col-md-10">
+        <a href="/#/patient-list">patient list</a> -> {{vm.Patient.firstName}} {{vm.Patient.lastName}}
+    </div>    
+</div>
+<hr /> 
+ <form>
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-5">
+            <lbl>
+                First Name
+            </lbl>
+            <input class="form-control" style="width:100%" ng-model="vm.Patient.firstName" />
+        </div>
+        <div class="col-sm-1" style="padding-top:20px">
+            <button type="button" ng-click="vm.OutcomeReport()" class="btn btn-default">Print Report</button>
+        </div>
+        <div class="col-sm-offset-2 col-sm-5">
+            <lbl>
+                Last Name
+            </lbl>
+            <input class="form-control" style="width:100%" ng-model="vm.Patient.lastName" />
+        </div>
+
+    </div>
+    <div style="height:50px;"><hr /></div>
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-7">
+            <table class="table table-condensed">
+                <tr>
+                    <th></th>
+                    <td style="width:80px">Admission</td>
+                    <td style="width:80px">Goal</td>
+                    <td style="width:80px">Discharge</td>
+                </tr>
+                <tr ng-repeat="o in vm.Outcomes">
+                    <td>{{o.title}}:</td>
+                    <td><input class="form-control outcome" ng-model="o.admission" type="number" /></td>
+                    <td><input class="form-control outcome" ng-model="o.goal" type="number" /></td>
+                    <td><input class="form-control outcome" ng-model="o.discharge" type="number" /></td>
+                </tr>
+
+
+            </table>
+            <div style="height:100px;"></div>
+
+        </div>
+    </div>
+</form>
