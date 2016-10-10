@@ -35,6 +35,7 @@
     <Content Include="app\systemjs.config.js" />
     <Content Include="dependancies\ng-google-chart.js" />
     <Content Include="img\blue.jpg" />
+    <Content Include="img\green2.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\nr-logo-web.png" />
     <Content Include="index.html" />
