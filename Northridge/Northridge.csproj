@@ -23,14 +23,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="app\app.controller.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\config.js" />
     <Content Include="app\css\site.css" />
+    <Content Include="app\main.js" />
+    <Content Include="app\models\Outcome.js" />
     <Content Include="app\pages\index\index.js" />
     <Content Include="app\pages\login\login.html" />
     <Content Include="app\pages\login\login.js" />
     <Content Include="app\pages\outcomes-report\outcomes-report.html" />
     <Content Include="app\pages\outcomes-report\outcomes-report.js" />
     <Content Include="app\pages\patient-list\patient-list.html" />
+    <Content Include="app\pages\patient-list\patient-list.js" />
     <Content Include="app\pages\patient\patient.html" />
+    <Content Include="app\pages\patient\patient.js" />
     <Content Include="app\services\patientFact.js" />
     <Content Include="app\systemjs.config.js" />
     <Content Include="dependancies\ng-google-chart.js" />
@@ -323,6 +330,13 @@
     <Content Include="app\pages\outcomes-report\outcomes-report.js.map" />
     <Content Include="app\pages\index\index.js.map" />
     <Content Include="app\services\patientFact.js.map" />
+    <Content Include="app\app.controller.js.map" />
+    <Content Include="app\app.js.map" />
+    <Content Include="app\config.js.map" />
+    <Content Include="app\main.js.map" />
+    <Content Include="app\models\Outcome.js.map" />
+    <Content Include="app\pages\patient\patient.js.map" />
+    <Content Include="app\pages\patient-list\patient-list.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -345,7 +359,6 @@
     <TypeScriptCompile Include="app\pages\patient-list\patient-list.ts" />
     <TypeScriptCompile Include="app\pages\patient\patient.ts" />
     <TypeScriptCompile Include="app\services\patientFact.ts" />
-    <TypeScriptCompile Include="app\test.ts" />
     <TypeScriptCompile Include="app\types\angular-cookies.d.ts" />
     <TypeScriptCompile Include="app\types\angular-route.d.ts" />
     <TypeScriptCompile Include="app\types\angular.d.ts" />
