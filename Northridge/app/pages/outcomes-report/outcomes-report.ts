@@ -9,7 +9,7 @@ module Application.GoogleChartOptions {
         public label: string;
         public type: string;
         constructor(id: string = '',
-                    label?: string = '', type) {
+                    label: string = '', type) {
             this.id = id;
             this.label = label;
             this.type = type;
@@ -26,30 +26,30 @@ module Application.Components {
     }
 
      
-    public class outcome  {
+    class outcome  {
         public title: string;
-        public admittance: number;
+        public admission: number;
         public discharge: number;
         public goal: number;
 
-        constructor(title?: string = '', admittance?: number = 0, goal?: number = 0, discharge?: number = 0) {
+        constructor(title: string = '', admission: number = 0, goal: number = 0, discharge: number = 0) {
             
             this.title = title;
-            this.admittance = admittance;
+            this.admission = admission;
             this.goal = goal;
             this.discharge = discharge;
         }
         GetChartRows() {
             let c1: any = [];
             c1.push({ v: this.title });
-            c1.push({ v: this.admittance });
+            c1.push({ v: this.admission });
             c1.push({ v: this.goal });
             c1.push({ v: this.discharge, f: 'test' });
 
             return c1
         }
     }
-    public class patient {
+    class patient {
         id: number;
         firstName: string;
         lastName: string;
@@ -79,7 +79,7 @@ module Application.Components {
         $insert = ['$location', '$http', '$timeout','patientFact','$routeParam'];
         constructor(private $location, private $http, private $timeout,
             private patientFact: Application.Services.IPatientFact,
-            private $routeParams: ng.route.IRouteParamsService) {
+            private $routeParams: IRouteParamsService) {
 
 
 
@@ -195,10 +195,8 @@ module Application.Components {
     }
     app.value('googleChartApiConfig', {
         version: '1.1',
-        optionalSettings: {
-            packages: ['bar'],
-            language: 'en'
-        }
+        optionalSettings: { packages: ['bar'], language: 'en' }
+    }
     );
     app.component("outcomesReport", {
         controller: outcomesReport,

@@ -9,7 +9,7 @@
 declare module Application.Models {
    export class Outcome {
         public title: string;
-        public admittance: number;
+        public admission: number;
         public discharge: number;
         public goal: number;
 
@@ -50,7 +50,7 @@ declare module Application.Components {
         income: boolean;
         address: boolean;
         assets: boolean;
-        savings: boolean;
+        
         pension: boolean;
         receipts: boolean;
         objectives: boolean;

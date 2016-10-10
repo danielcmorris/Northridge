@@ -22,20 +22,20 @@ var Application;
     var Components;
     (function (Components) {
         var outcome = (function () {
-            function outcome(title, admittance, goal, discharge) {
+            function outcome(title, admission, goal, discharge) {
                 if (title === void 0) { title = ''; }
-                if (admittance === void 0) { admittance = 0; }
+                if (admission === void 0) { admission = 0; }
                 if (goal === void 0) { goal = 0; }
                 if (discharge === void 0) { discharge = 0; }
                 this.title = title;
-                this.admittance = admittance;
+                this.admission = admission;
                 this.goal = goal;
                 this.discharge = discharge;
             }
             outcome.prototype.GetChartRows = function () {
                 var c1 = [];
                 c1.push({ v: this.title });
-                c1.push({ v: this.admittance });
+                c1.push({ v: this.admission });
                 c1.push({ v: this.goal });
                 c1.push({ v: this.discharge, f: 'test' });
                 return c1;
@@ -143,10 +143,8 @@ var Application;
         Components.outcomesReport = outcomesReport;
         app.value('googleChartApiConfig', {
             version: '1.1',
-            optionalSettings: {
-                packages: ['bar'],
-                language: 'en'
-            } });
+            optionalSettings: { packages: ['bar'], language: 'en' }
+        });
         app.component("outcomesReport", {
             controller: outcomesReport,
             controllerAs: "vm",

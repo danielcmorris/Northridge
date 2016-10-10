@@ -51,7 +51,6 @@
     <TypeScriptCompile Include="app\app.controller.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\config.ts" />
-    <TypeScriptCompile Include="app\models\file1.ts" />
     <TypeScriptCompile Include="app\models\Outcome.ts" />
     <TypeScriptCompile Include="app\pages\index\index.ts" />
     <TypeScriptCompile Include="app\pages\login\login.ts" />

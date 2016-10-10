@@ -46,9 +46,15 @@ module Application.Config {
     }
     app.config(routes);
 
+    interface IHttpProvider extends ng.IHttpProvider {
+         defaults:IHttpProviderDefaults
+    }
+    interface IHttpProviderDefaults extends ng.IHttpProviderDefaults {
+        useXDomain: boolean;
+    }
     export class httpConfig {
         $insert = ["$httpProvider"]
-        constructor(private $httpProvider: ng.IHttpProvider) {
+        constructor(private $httpProvider:IHttpProvider) {
 
             this.$httpProvider.defaults.useXDomain = true;
             this.$httpProvider.defaults.withCredentials = false;
